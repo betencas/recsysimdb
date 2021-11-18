@@ -6,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 #from fuzzywuzzy import fuzz
 #from fuzzywuzzy import process
 
-movies = pd.read_csv('c:/py/homemovies.csv', sep = ",")
+movies = pd.read_csv('https://raw.githubusercontent.com/betencas/recsysimdb/main/homemovies.csv', sep = ",")
 
 X = movies[['genres_Action',
        'genres_Adventure', 'genres_Animation', 'genres_Biography',
