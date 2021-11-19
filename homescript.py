@@ -6,7 +6,7 @@ from sklearn.neighbors import NearestNeighbors
 #from fuzzywuzzy import fuzz
 #from fuzzywuzzy import process
 
-movies = pd.read_csv('https://raw.githubusercontent.com/betencas/recsysimdb/main/homemovies.csv', sep = ",")
+movies = pd.read_csv('c:/py/homemovies.csv', sep = ",")
 
 X = movies[['genres_Action',
        'genres_Adventure', 'genres_Animation', 'genres_Biography',
@@ -45,3 +45,7 @@ if st.button('Submit'):
 
     st.header("Thank you very much! Please check below what we have for you:")
     st.write(results_a[1:5])
+
+    title= str(results_n.iloc[1]['title_id'])
+    url = f"https://www.imdb.com/title/{title}/?ref_=nv_sr_srsg_0"
+    st.write(f"Check [here]({url}) for the details for our first recommendation :)")
